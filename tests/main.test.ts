@@ -40,4 +40,10 @@ describe("isAcademic Test Suite", function () {
 	it("Test " + randomString2 + ".ac.ae", () => {
 		expect(isAcademic(randomString2 + ".ac.ae")).to.equal(true);
 	});
+	it("Test america.edu", () => {
+		expect(isAcademic("america.edu")).to.equal(false);
+	});
+	it("Test mail.america.edu", () => {
+		expect(isAcademic("mail.america.edu")).to.equal(false);
+	});
 });
