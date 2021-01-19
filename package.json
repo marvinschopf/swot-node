@@ -1,0 +1,9 @@
+{
+  "name": "swot-node",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "repository": "https://github.com/magicmarvman/swot-node.git",
+  "author": "Marvin Schopf <marvin@schopf.biz>",
+  "license": "MIT",
+  "private": false
+}
