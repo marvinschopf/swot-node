@@ -25,12 +25,12 @@ or
 ```javascript
 const swot = require("swot-node")
 
-swot.isAcademic('lreilly@stanford.edu')           # true
-swot.isAcademic('lreilly@strath.ac.uk'            # true
-swot.isAcademic('lreilly@soft-eng.strath.ac.uk'   # true
-swot.isAcademic('pedro@ugr.es')                   # true
-swot.isAcademic('lee@uottawa.ca')                 # true
-swot.isAcademic('lee@leerilly.net')               # false
+swot.isAcademic('lreilly@stanford.edu')           // true
+swot.isAcademic('lreilly@strath.ac.uk'            // true
+swot.isAcademic('lreilly@soft-eng.strath.ac.uk'   // true
+swot.isAcademic('pedro@ugr.es')                   // true
+swot.isAcademic('lee@uottawa.ca')                 // true
+swot.isAcademic('lee@leerilly.net')               // false
 ```
 
 #### Verify Domain Names
@@ -38,11 +38,11 @@ swot.isAcademic('lee@leerilly.net')               # false
 ```javascript
 const swot = require("swot-node")
 
-swot.isAcademic('harvard.edu')              # true
-swot.isAcademic('www.harvard.edu')          # true
-swot.isAcademic('http://www.harvard.edu')   # true
-swot.isAcademic('http://www.github.com')    # false
-swot.isAcademic('http://www.rangers.co.uk') # false
+swot.isAcademic('harvard.edu')              // true
+swot.isAcademic('www.harvard.edu')          // true
+swot.isAcademic('http://www.harvard.edu')   // true
+swot.isAcademic('http://www.github.com')    // false
+swot.isAcademic('http://www.rangers.co.uk') // false
 ```
 
 #### Find School Names
@@ -51,10 +51,10 @@ swot.isAcademic('http://www.rangers.co.uk') # false
 const swot = require("swot-node")
 
 swot.getSchoolName('lreilly@cs.strath.ac.uk')
-# => "University of Strathclyde"
+// => "University of Strathclyde"
 
 swot.getSchoolName('http://www.stanford.edu')
-# => "Stanford University"
+// => "Stanford University"
 ```
 
 ### See Also
