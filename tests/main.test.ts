@@ -30,14 +30,14 @@ describe("isAcademic Test Suite", function () {
 	});
 	it("Test yorkuniversity.us", () => {
 		expect(isAcademic("yorkuniversity.us")).to.equal(true);
-    });
-    const randomString1: string = makeid(16);
-    const randomString2: string = makeid(16);
-    const randomString3: string = makeid(16);
-    it("Test " + randomString1 + ".edu", () => {
-        expect(isAcademic(randomString1 + ".edu")).to.equal(true);
-    });
-    it("Test " + randomString2 + ".ac.ae", () => {
-        expect(isAcademic(randomString2 + ".ac.ae")).to.equal(true);
-    });
+	});
+	const randomString1: string = makeid(16);
+	const randomString2: string = makeid(16);
+	const randomString3: string = makeid(16);
+	it("Test " + randomString1 + ".edu", () => {
+		expect(isAcademic(randomString1 + ".edu")).to.equal(true);
+	});
+	it("Test " + randomString2 + ".ac.ae", () => {
+		expect(isAcademic(randomString2 + ".ac.ae")).to.equal(true);
+	});
 });
