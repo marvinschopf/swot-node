@@ -1,6 +1,17 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/macos,windows,linux
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,linux
+# Created by https://www.toptal.com/developers/gitignore/api/hugo,macos,windows,linux
+# Edit at https://www.toptal.com/developers/gitignore?templates=hugo,macos,windows,linux
+
+### Hugo ###
+# Generated files by hugo
+/public/
+/resources/_gen/
+hugo_stats.json
+
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
 
 ### Linux ###
 *~
@@ -71,4 +82,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,windows,linux
+# End of https://www.toptal.com/developers/gitignore/api/hugo,macos,windows,linux
