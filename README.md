@@ -1,5 +1,5 @@
-# Swot :apple:
-### :rotating_light: If you would like to add your school/educational institution, please create a pull request in [this repository](https://github.com/magicmarvman/swot-data). :rotating_light:
+# Swot 🍎
+### 🚨 If you would like to add your school/educational institution, please create a pull request in [this repository](https://github.com/magicmarvman/swot-data). 🚨
 
 If you have a product or service and offer **academic discounts**, there's a good chance there's some manual component to the approval process. Perhaps `.edu` email addresses are automatically approved because, for the most part at least, they're associated with American post-secondary educational institutions. Perhaps `.ac.uk` email addresses are automatically approved because they're guaranteed to belong to British universities and colleges. Unfortunately, not every country has an education-specific TLD (Top Level Domain) and plenty of schools use `.com` or `.net`.
 
@@ -61,6 +61,30 @@ swot.getSchoolName('https://www.github.com')
 swot.getSchoolName('QaPk59GZ9Zv8.edu')
 // => true
 ```
+
+### License
+**The MIT License (MIT)**
+
+Copyright (c) 2021 Marvin Schopf <br>
+Copyright (c) 2013 Lee Reilly
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
 ### See Also
 
