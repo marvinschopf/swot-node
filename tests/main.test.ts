@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { isAcademic } from "./../src";
+import { isAcademic, getSchoolName } from "./../src";
 
 function makeid(length: number): string {
 	let result: string = "";
@@ -116,4 +116,10 @@ describe("isAcademic Test Suite", function () {
 	it("Test http://www.rangers.co.uk", () => {
 		expect(isAcademic("http://www.rangers.co.uk")).to.equal(false);
 	});
+});
+
+describe("getSchoolName Test Suite", () => {
+    it("Test http://www.harvard.edu", () => {
+        expect(getSchoolName("http://www.harvard.edu")).to.equal("Harvard University");
+    });
 });

@@ -5,7 +5,10 @@ import blacklist from "./blacklist";
 import * as path from "path";
 
 // Remove public suffixes from the domain
-function domainWithoutSuffix(domain: string, publicSuffix: string): any {
+function domainWithoutSuffix(
+	domain: string,
+	publicSuffix: string
+): string | boolean {
 	if (domain == null || domain.length === 0) {
 		return publicSuffix;
 	}
@@ -13,6 +16,15 @@ function domainWithoutSuffix(domain: string, publicSuffix: string): any {
 }
 
 export function isAcademic(url: string): boolean {
+	const schoolName: string | boolean = getSchoolName(url);
+	if (schoolName === false) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+export function getSchoolName(url: string): string | boolean {
 	// Parse the URL using TLDjs
 	const parsedUrl: any = parse(url);
 
@@ -20,9 +32,11 @@ export function isAcademic(url: string): boolean {
 		return false;
 	}
 
+	let temporaryAnswer: boolean = false;
+
 	// Check if the TLD is an academic TLD
 	if (academicTlds.indexOf(parsedUrl.publicSuffix) > -1) {
-		return true;
+		temporaryAnswer = true;
 	}
 
 	// Check how many TLD's the suffix consists of
@@ -43,8 +57,23 @@ export function isAcademic(url: string): boolean {
 				)
 			)
 		) {
-			return true;
+			return fs
+				.readFileSync(
+					path.resolve(
+						__dirname,
+						"..",
+						"data",
+						"domains",
+						...suffixes,
+						domainWithoutSuffix(parsedUrl.domain, parsedUrl.publicSuffix) +
+							".txt"
+					)
+				)
+				.toString("utf-8");
 		} else {
+			if (temporaryAnswer === true) {
+				return true;
+			}
 			return false;
 		}
 	} else {
@@ -61,8 +90,23 @@ export function isAcademic(url: string): boolean {
 				)
 			)
 		) {
-			return true;
+			return fs
+				.readFileSync(
+					path.resolve(
+						__dirname,
+						"..",
+						"data",
+						"domains",
+						parsedUrl.publicSuffix,
+						domainWithoutSuffix(parsedUrl.domain, parsedUrl.publicSuffix) +
+							".txt"
+					)
+				)
+				.toString("utf-8");
 		} else {
+			if (temporaryAnswer === true) {
+				return true;
+			}
 			return false;
 		}
 	}
