@@ -26,8 +26,8 @@ or
 const swot = require("swot-node")
 
 swot.isAcademic('lreilly@stanford.edu')           // true
-swot.isAcademic('lreilly@strath.ac.uk'            // true
-swot.isAcademic('lreilly@soft-eng.strath.ac.uk'   // true
+swot.isAcademic('lreilly@strath.ac.uk')           // true
+swot.isAcademic('lreilly@soft-eng.strath.ac.uk')  // true
 swot.isAcademic('pedro@ugr.es')                   // true
 swot.isAcademic('lee@uottawa.ca')                 // true
 swot.isAcademic('lee@leerilly.net')               // false
