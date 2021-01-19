@@ -34,6 +34,13 @@ describe("isAcademic Test Suite", function () {
 	const randomString1: string = makeid(16);
 	const randomString2: string = makeid(16);
 	const randomString3: string = makeid(16);
+	const randomString4: string = makeid(16);
+	const randomString5: string = makeid(16);
+	const randomString6: string = makeid(16);
+	const randomString7: string = makeid(16);
+	const randomString8: string = makeid(16);
+	const randomString9: string = makeid(16);
+	const randomString10: string = makeid(16);
 	it("Test " + randomString1 + ".edu", () => {
 		expect(isAcademic(randomString1 + ".edu")).to.equal(true);
 	});
@@ -45,5 +52,35 @@ describe("isAcademic Test Suite", function () {
 	});
 	it("Test mail.america.edu", () => {
 		expect(isAcademic("mail.america.edu")).to.equal(false);
+	});
+	it("Test mail@berlin.de", () => {
+		expect(isAcademic("mail@berlin.de")).to.equal(true);
+	});
+	it("Test mail@" + randomString3 + ".edu", () => {
+		expect(isAcademic("mail@" + randomString3 + ".edu")).to.equal(true);
+	});
+	it("Test mail@" + randomString4 + ".ac.ae", () => {
+		expect(isAcademic("mail@" + randomString4 + ".ac.ae")).to.equal(true);
+	});
+	it("Test mail@www.duke.edu", () => {
+		expect(isAcademic("mail@www.duke.edu")).to.equal(true);
+	});
+	it("Test www.enis.rnu.tn", () => {
+		expect(isAcademic("www.enis.rnu.tn")).to.equal(true);
+	});
+	it("Test enis.rnu.tn", () => {
+		expect(isAcademic("enis.rnu.tn")).to.equal(true);
+	});
+	it("Test mail@enis.rnu.tn", () => {
+		expect(isAcademic("mail@enis.rnu.tn")).to.equal(true);
+	});
+	it("Test mail@www.enis.rnu.tn", () => {
+		expect(isAcademic("mail@www.enis.rnu.tn")).to.equal(true);
+	});
+	it("Test " + randomString5 + ".rnu.tn", () => {
+		expect(isAcademic(randomString5 + ".rnu.tn")).to.equal(false);
+	});
+	it("Test www." + randomString6 + ".rnu.tn", () => {
+		expect(isAcademic("www." + randomString6 + ".rnu.tn")).to.equal(false);
 	});
 });
