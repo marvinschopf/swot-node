@@ -1,6 +1,7 @@
 import { parse } from "tldjs";
 import * as fs from "fs";
 import academicTlds from "./academicTlds";
+import blacklist from "./blacklist";
 import * as path from "path";
 
 // Remove public suffixes from the domain
@@ -13,7 +14,11 @@ function domainWithoutSuffix(domain: string, publicSuffix: string): any {
 
 export function isAcademic(url: string): boolean {
 	// Parse the URL using TLDjs
-	const parsedUrl: any = parse(url);
+    const parsedUrl: any = parse(url);
+    
+    if(blacklist.indexOf(parsedUrl.domain) > -1) {
+        return false;
+    }
 
 	// Check if the TLD is an academic TLD
 	if (academicTlds.indexOf(parsedUrl.publicSuffix) > -1) {
