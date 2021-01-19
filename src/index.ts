@@ -26,7 +26,11 @@ export function isAcademic(url: string): boolean {
 
 export function getSchoolName(url: string): string | boolean {
 	// Parse the URL using TLDjs
-	const parsedUrl: any = parse(url);
+    const parsedUrl: any = parse(url);
+    
+    if (parsedUrl.publicSuffix === null) {
+        return false;
+    }
 
 	if (blacklist.indexOf(parsedUrl.domain) > -1) {
 		return false;
