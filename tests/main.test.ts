@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { isAcademic, getSchoolName } from "./../src";
+import { isAcademic, getSchoolName, isAcademicAsync } from "./../src";
 
 function makeid(length: number): string {
 	let result: string = "";
@@ -118,6 +118,123 @@ describe("isAcademic Test Suite", function () {
 	});
 	it('Test ""', () => {
 		expect(isAcademic("")).to.equal(false);
+	});
+});
+
+describe("isAcademic Test Suite (ASYNC)", function () {
+	it("Test berlin.de", async () => {
+		expect(await isAcademicAsync("berlin.de")).to.equal(true);
+	});
+	it("Test stanford.edu", async () => {
+		expect(await isAcademicAsync("stanford.edu")).to.equal(true);
+	});
+	it("Test github.com", async () => {
+		expect(await isAcademicAsync("github.com")).to.equal(false);
+	});
+	it("Test itb.edu.bn", async () => {
+		expect(await isAcademicAsync("itb.edu.bn")).to.equal(true);
+	});
+	it("Test itb.bn", async () => {
+		expect(await isAcademicAsync("itb.bn")).to.equal(false);
+	});
+	it("Test yorkuniversity.us", async () => {
+		expect(await isAcademicAsync("yorkuniversity.us")).to.equal(true);
+	});
+	const randomString1: string = makeid(16);
+	const randomString2: string = makeid(16);
+	const randomString3: string = makeid(16);
+	const randomString4: string = makeid(16);
+	const randomString5: string = makeid(16);
+	const randomString6: string = makeid(16);
+	const randomString7: string = makeid(16);
+	const randomString8: string = makeid(16);
+	const randomString9: string = makeid(16);
+	const randomString10: string = makeid(16);
+	it("Test " + randomString1 + ".edu", async () => {
+		expect(await isAcademicAsync(randomString1 + ".edu")).to.equal(true);
+	});
+	it("Test " + randomString2 + ".ac.ae", async () => {
+		expect(await isAcademicAsync(randomString2 + ".ac.ae")).to.equal(true);
+	});
+	it("Test america.edu", async () => {
+		expect(await isAcademicAsync("america.edu")).to.equal(false);
+	});
+	it("Test mail.america.edu", async () => {
+		expect(await isAcademicAsync("mail.america.edu")).to.equal(false);
+	});
+	it("Test mail@berlin.de", async () => {
+		expect(await isAcademicAsync("mail@berlin.de")).to.equal(true);
+	});
+	it("Test mail@" + randomString3 + ".edu", async () => {
+		expect(await isAcademicAsync("mail@" + randomString3 + ".edu")).to.equal(
+			true
+		);
+	});
+	it("Test mail@" + randomString4 + ".ac.ae", async () => {
+		expect(await isAcademicAsync("mail@" + randomString4 + ".ac.ae")).to.equal(
+			true
+		);
+	});
+	it("Test mail@www.duke.edu", async () => {
+		expect(await isAcademicAsync("mail@www.duke.edu")).to.equal(true);
+	});
+	it("Test www.enis.rnu.tn", async () => {
+		expect(await isAcademicAsync("www.enis.rnu.tn")).to.equal(true);
+	});
+	it("Test enis.rnu.tn", async () => {
+		expect(await isAcademicAsync("enis.rnu.tn")).to.equal(true);
+	});
+	it("Test mail@enis.rnu.tn", async () => {
+		expect(await isAcademicAsync("mail@enis.rnu.tn")).to.equal(true);
+	});
+	it("Test mail@www.enis.rnu.tn", async () => {
+		expect(await isAcademicAsync("mail@www.enis.rnu.tn")).to.equal(true);
+	});
+	it("Test " + randomString5 + ".rnu.tn", async () => {
+		expect(await isAcademicAsync(randomString5 + ".rnu.tn")).to.equal(false);
+	});
+	it("Test www." + randomString6 + ".rnu.tn", async () => {
+		expect(await isAcademicAsync("www." + randomString6 + ".rnu.tn")).to.equal(
+			false
+		);
+	});
+	it("Test lreilly@stanford.edu", async () => {
+		expect(await isAcademicAsync("lreilly@stanford.edu")).to.equal(true);
+	});
+	it("Test lreilly@strath.ac.uk", async () => {
+		expect(await isAcademicAsync("lreilly@strath.ac.uk")).to.equal(true);
+	});
+	it("Test lreilly@soft-eng.strath.ac.uk", async () => {
+		expect(await isAcademicAsync("lreilly@soft-eng.strath.ac.uk")).to.equal(
+			true
+		);
+	});
+	it("Test pedro@ugr.es", async () => {
+		expect(await isAcademicAsync("pedro@ugr.es")).to.equal(true);
+	});
+	it("Test lee@uottawa.ca", async () => {
+		expect(await isAcademicAsync("lee@uottawa.ca")).to.equal(true);
+	});
+	it("Test lee@leerilly.net", async () => {
+		expect(await isAcademicAsync("lee@leerilly.net")).to.equal(false);
+	});
+	it("Test harvard.edu", async () => {
+		expect(await isAcademicAsync("harvard.edu")).to.equal(true);
+	});
+	it("Test www.harvard.edu", async () => {
+		expect(await isAcademicAsync("www.harvard.edu")).to.equal(true);
+	});
+	it("Test http://www.harvard.edu", async () => {
+		expect(await isAcademicAsync("http://www.harvard.edu")).to.equal(true);
+	});
+	it("Test https://www.github.com", async () => {
+		expect(await isAcademicAsync("https://www.github.com")).to.equal(false);
+	});
+	it("Test http://www.rangers.co.uk", async () => {
+		expect(await isAcademicAsync("http://www.rangers.co.uk")).to.equal(false);
+	});
+	it('Test ""', async () => {
+		expect(await isAcademicAsync("")).to.equal(false);
 	});
 });
 
