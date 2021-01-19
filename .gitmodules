@@ -1,0 +1,3 @@
+[submodule "lib/domains"]
+	path = lib/domains
+	url = https://github.com/magicmarvman/swot-data.git
