@@ -1,0 +1,26 @@
+baseURL = "/"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "swot-node"
+theme = "cayman"
+
+
+# Syntax highlighting
+pygmentsCodefences = true
+pygmentsStyle = "pygments"
+
+[params]
+project_name = "swot-node"
+project_tagline = "🏫 Identify email addresses or domains names that belong to colleges or universities. Help automate the process of approving or rejecting academic discounts."
+footer = "[Marvin Schopf](https://marvin.is)"
+
+[menu]
+[[menu.nav]]
+name = "View on GitHub"
+url = "https://github.com/magicmarvman/swot-node"
+weight = 1
+[[menu.nav]]
+name = "View on NPM"
+url = "https://www.npmjs.com/package/swot-node"
+weight = 2
+

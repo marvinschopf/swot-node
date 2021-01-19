@@ -1,0 +1,3 @@
+[submodule "themes/cayman"]
+	path = themes/cayman
+	url = https://github.com/magicmarvman/cayman-hugo-theme.git
