@@ -69,7 +69,7 @@ export function getSchoolName(url: string): string | boolean {
 							".txt"
 					)
 				)
-				.toString("utf-8");
+				.toString("utf-8").replace("\n", "");
 		} else {
 			if (temporaryAnswer === true) {
 				return true;
@@ -102,7 +102,7 @@ export function getSchoolName(url: string): string | boolean {
 							".txt"
 					)
 				)
-				.toString("utf-8");
+				.toString("utf-8").replace("\n", "");
 		} else {
 			if (temporaryAnswer === true) {
 				return true;
