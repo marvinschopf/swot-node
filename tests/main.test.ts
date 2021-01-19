@@ -119,7 +119,9 @@ describe("isAcademic Test Suite", function () {
 });
 
 describe("getSchoolName Test Suite", () => {
-    it("Test http://www.harvard.edu", () => {
-        expect(getSchoolName("http://www.harvard.edu")).to.equal("Harvard University");
-    });
+	it("Test http://www.harvard.edu", () => {
+		expect(getSchoolName("http://www.harvard.edu")).to.equal(
+			"Harvard University"
+		);
+	});
 });
