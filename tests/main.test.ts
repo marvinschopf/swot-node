@@ -83,4 +83,22 @@ describe("isAcademic Test Suite", function () {
 	it("Test www." + randomString6 + ".rnu.tn", () => {
 		expect(isAcademic("www." + randomString6 + ".rnu.tn")).to.equal(false);
 	});
+	it("Test lreilly@stanford.edu", () => {
+		expect(isAcademic("lreilly@stanford.edu")).to.equal(true);
+	});
+	it("Test lreilly@strath.ac.uk", () => {
+		expect(isAcademic("lreilly@strath.ac.uk")).to.equal(true);
+	});
+	it("Test lreilly@soft-eng.strath.ac.uk", () => {
+		expect(isAcademic("lreilly@soft-eng.strath.ac.uk")).to.equal(true);
+	});
+	it("Test pedro@ugr.es", () => {
+		expect(isAcademic("pedro@ugr.es")).to.equal(true);
+	});
+	it("Test lee@uottawa.ca", () => {
+		expect(isAcademic("lee@uottawa.ca")).to.equal(true);
+	});
+	it("Test lee@leerilly.net", () => {
+		expect(isAcademic("lee@leerilly.net")).to.equal(false);
+	});
 });
