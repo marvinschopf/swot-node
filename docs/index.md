@@ -65,7 +65,7 @@ swot.getSchoolName('QaPk59GZ9Zv8.edu')
 ### License
 **The MIT License (MIT)**
 
-Copyright (c) 2021 Marvin Schopf 
+Copyright (c) 2021 Marvin Schopf <br>
 Copyright (c) 2013 Lee Reilly
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
