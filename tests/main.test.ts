@@ -119,9 +119,27 @@ describe("isAcademic Test Suite", function () {
 });
 
 describe("getSchoolName Test Suite", () => {
+	const randomString1: string = makeid(16);
+	("");
 	it("Test http://www.harvard.edu", () => {
 		expect(getSchoolName("http://www.harvard.edu")).to.equal(
 			"Harvard University"
 		);
+	});
+	it("Test lreilly@cs.strath.ac.uk", () => {
+		expect(getSchoolName("lreilly@cs.strath.ac.uk")).to.equal(
+			"University of Strathclyde"
+		);
+	});
+	it("Test enis.rnu.tn", () => {
+		expect(getSchoolName("enis.rnu.tn")).to.equal(
+			"National Engineering School of Sfax"
+		);
+	});
+	it("Test http://www.rangers.co.uk", () => {
+		expect(getSchoolName("http://www.rangers.co.uk")).to.equal(false);
+	});
+	it("Test mail@" + randomString1 + ".edu", () => {
+		expect(getSchoolName("mail@" + randomString1 + ".edu")).to.equal(true);
 	});
 });
