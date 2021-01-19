@@ -4,7 +4,10 @@ import academicTlds from "./academicTlds";
 import * as path from "path";
 
 // Remove public suffixes from the domain
-function domainWithoutSuffix(domain: string, publicSuffix: string): string {
+function domainWithoutSuffix(domain: string, publicSuffix: string): any {
+    if(domain == null || domain.length === 0) {
+        return publicSuffix;
+    } 
 	return domain.replace("." + publicSuffix, "");
 }
 
