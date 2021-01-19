@@ -101,4 +101,19 @@ describe("isAcademic Test Suite", function () {
 	it("Test lee@leerilly.net", () => {
 		expect(isAcademic("lee@leerilly.net")).to.equal(false);
 	});
+	it("Test harvard.edu", () => {
+		expect(isAcademic("harvard.edu")).to.equal(true);
+	});
+	it("Test www.harvard.edu", () => {
+		expect(isAcademic("www.harvard.edu")).to.equal(true);
+	});
+	it("Test http://www.harvard.edu", () => {
+		expect(isAcademic("http://www.harvard.edu")).to.equal(true);
+	});
+	it("Test https://www.github.com", () => {
+		expect(isAcademic("https://www.github.com")).to.equal(false);
+	});
+	it("Test http://www.rangers.co.uk", () => {
+		expect(isAcademic("http://www.rangers.co.uk")).to.equal(false);
+	});
 });
