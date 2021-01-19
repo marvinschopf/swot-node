@@ -116,6 +116,9 @@ describe("isAcademic Test Suite", function () {
 	it("Test http://www.rangers.co.uk", () => {
 		expect(isAcademic("http://www.rangers.co.uk")).to.equal(false);
 	});
+	it('Test ""', () => {
+		expect(isAcademic("")).to.equal(false);
+	});
 });
 
 describe("getSchoolName Test Suite", () => {
@@ -141,5 +144,8 @@ describe("getSchoolName Test Suite", () => {
 	});
 	it("Test mail@" + randomString1 + ".edu", () => {
 		expect(getSchoolName("mail@" + randomString1 + ".edu")).to.equal(true);
+	});
+	it('Test ""', () => {
+		expect(getSchoolName("")).to.equal(false);
 	});
 });
