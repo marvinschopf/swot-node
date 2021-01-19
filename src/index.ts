@@ -2,7 +2,6 @@ import { parse } from "tldjs";
 import * as fs from "fs";
 import academicTlds from "./academicTlds";
 import blacklist from "./blacklist";
-import { promisify } from "util";
 import * as path from "path";
 
 // Remove public suffixes from the domain
@@ -16,9 +15,31 @@ function domainWithoutSuffix(
 	return domain.replace("." + publicSuffix, "");
 }
 
-// Create asynchronous version of the functions using util.promisify
-const existsAsync: Function = promisify(fs.exists);
-const readFileAsync: Function = promisify(fs.readFile);
+let existsAsync: Function = null;
+let readFileAsync: Function = null;
+
+// Check if fs already supports promises (node >= 11) or if we have to improvise
+if (fs.promises === undefined) {
+	// Create asynchronous version of the functions using util.promisify
+	const util = require("util");
+	existsAsync = util.promisify(fs.exists);
+	readFileAsync = util.promisify(fs.readFile);
+} else {
+	// Set "readFileAsync" to Promise version, but we have to implement existsAsync ourselves because of the deprecation of "exists".
+	readFileAsync = fs.promises.readFile;
+	existsAsync = async function (fileName: string) {
+		try {
+			await fs.promises.stat(fileName);
+			return true;
+		} catch (err: any) {
+			if (err.code === "ENOENT") {
+				return false;
+			} else {
+				throw err;
+			}
+		}
+	};
+}
 
 export async function isAcademicAsync(url: string) {
 	const schoolName: string | boolean = await getSchoolNameAsync(url);
