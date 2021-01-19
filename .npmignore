@@ -4,3 +4,4 @@ tests
 coverage
 .nyc_output
 .github
+netlify.toml
