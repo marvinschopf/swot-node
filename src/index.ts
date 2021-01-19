@@ -14,11 +14,11 @@ function domainWithoutSuffix(domain: string, publicSuffix: string): any {
 
 export function isAcademic(url: string): boolean {
 	// Parse the URL using TLDjs
-    const parsedUrl: any = parse(url);
-    
-    if(blacklist.indexOf(parsedUrl.domain) > -1) {
-        return false;
-    }
+	const parsedUrl: any = parse(url);
+
+	if (blacklist.indexOf(parsedUrl.domain) > -1) {
+		return false;
+	}
 
 	// Check if the TLD is an academic TLD
 	if (academicTlds.indexOf(parsedUrl.publicSuffix) > -1) {
