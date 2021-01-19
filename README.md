@@ -54,6 +54,12 @@ swot.getSchoolName('lreilly@cs.strath.ac.uk')
 
 swot.getSchoolName('http://www.stanford.edu')
 // => "Stanford University"
+
+swot.getSchoolName('https://www.github.com')
+// => false
+
+swot.getSchoolName('QaPk59GZ9Zv8.edu')
+// => true
 ```
 
 ### See Also
