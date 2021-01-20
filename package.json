@@ -4,6 +4,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/magicmarvman/swot-node.git",
+  "homepage": "https://swot.js.org",
   "author": "Marvin Schopf <marvin@schopf.biz>",
   "license": "MIT",
   "private": false,
