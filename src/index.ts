@@ -25,6 +25,15 @@ export function isAcademic(url: string): boolean {
 }
 
 export function getSchoolName(url: string): string | boolean {
+	const schoolNames: Array<string> | boolean = getSchoolNames(url);
+	if (typeof schoolNames === "boolean") {
+		return schoolNames;
+	} else {
+		return schoolNames[0];
+	}
+}
+
+export function getSchoolNames(url: string): Array<string> | boolean {
 	// Parse the URL using TLDjs
 	const parsedUrl: any = parse(url);
 
@@ -76,7 +85,7 @@ export function getSchoolName(url: string): string | boolean {
 					)
 				)
 				.toString("utf-8")
-				.replace("\n", "");
+				.split("\n");
 		} else {
 			if (temporaryAnswer === true) {
 				return true;
@@ -112,7 +121,7 @@ export function getSchoolName(url: string): string | boolean {
 					)
 				)
 				.toString("utf-8")
-				.replace("\n", "");
+				.split("\n");
 		} else {
 			if (temporaryAnswer === true) {
 				return true;
