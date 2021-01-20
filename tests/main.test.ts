@@ -57,10 +57,6 @@ describe("isAcademic Test Suite", function () {
 	const randomString4: string = makeid(16);
 	const randomString5: string = makeid(16);
 	const randomString6: string = makeid(16);
-	const randomString7: string = makeid(16);
-	const randomString8: string = makeid(16);
-	const randomString9: string = makeid(16);
-	const randomString10: string = makeid(16);
 	it("Test " + randomString1 + ".edu", () => {
 		expect(isAcademic(randomString1 + ".edu")).to.equal(true);
 	});
@@ -170,7 +166,6 @@ describe("getSchoolName Test Suite", () => {
 });
 
 describe("getSchoolNames Test Suite", () => {
-	const randomString1: string = makeid(16);
 	it("Test lreilly@cs.strath.ac.uk", () => {
 		assert.deepStrictEqual(getSchoolNames("lreilly@cs.strath.ac.uk"), [
 			"University of Strathclyde",
