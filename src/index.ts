@@ -55,6 +55,7 @@ export function getSchoolName(url: string): string | boolean {
 					__dirname,
 					"..",
 					"data",
+					"lib",
 					"domains",
 					...suffixes,
 					domainWithoutSuffix(parsedUrl.domain, parsedUrl.publicSuffix) + ".txt"
@@ -67,6 +68,7 @@ export function getSchoolName(url: string): string | boolean {
 						__dirname,
 						"..",
 						"data",
+						"lib",
 						"domains",
 						...suffixes,
 						domainWithoutSuffix(parsedUrl.domain, parsedUrl.publicSuffix) +
@@ -101,6 +103,7 @@ export function getSchoolName(url: string): string | boolean {
 						__dirname,
 						"..",
 						"data",
+						"lib",
 						"domains",
 						parsedUrl.publicSuffix,
 						domainWithoutSuffix(parsedUrl.domain, parsedUrl.publicSuffix) +
