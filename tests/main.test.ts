@@ -1,6 +1,9 @@
 import { expect } from "chai";
 import { isAcademic, getSchoolName } from "./../src";
 
+import * as path from "path";
+import * as fs from "fs";
+
 function makeid(length: number): string {
 	let result: string = "";
 	const characters: string =
@@ -10,6 +13,22 @@ function makeid(length: number): string {
 		result += characters.charAt(Math.floor(Math.random() * charactersLength));
 	}
 	return result;
+}
+
+function getDomainFile(domainPath: string): string {
+	return fs
+		.readFileSync(
+			path.resolve(
+				__dirname,
+				"..",
+				"data",
+				"lib",
+				"domains",
+				domainPath + ".txt"
+			)
+		)
+		.toString("utf-8")
+		.replace("\n", "");
 }
 
 describe("isAcademic Test Suite", function () {
@@ -126,18 +145,16 @@ describe("getSchoolName Test Suite", () => {
 	("");
 	it("Test http://www.harvard.edu", () => {
 		expect(getSchoolName("http://www.harvard.edu")).to.equal(
-			"Harvard University"
+			getDomainFile("edu/harvard")
 		);
 	});
 	it("Test lreilly@cs.strath.ac.uk", () => {
 		expect(getSchoolName("lreilly@cs.strath.ac.uk")).to.equal(
-			"University of Strathclyde"
+			getDomainFile("uk/ac/strath")
 		);
 	});
 	it("Test enis.rnu.tn", () => {
-		expect(getSchoolName("enis.rnu.tn")).to.equal(
-			"National Engineering School of Sfax"
-		);
+		expect(getSchoolName("enis.rnu.tn")).to.equal(getDomainFile("tn/rnu/enis"));
 	});
 	it("Test http://www.rangers.co.uk", () => {
 		expect(getSchoolName("http://www.rangers.co.uk")).to.equal(false);
