@@ -142,19 +142,20 @@ describe("isAcademic Test Suite", function () {
 
 describe("getSchoolName Test Suite", () => {
 	const randomString1: string = makeid(16);
-	("");
 	it("Test http://www.harvard.edu", () => {
 		expect(getSchoolName("http://www.harvard.edu")).to.equal(
-			getDomainFile("edu/harvard")
+			"Harvard University"
 		);
 	});
 	it("Test lreilly@cs.strath.ac.uk", () => {
 		expect(getSchoolName("lreilly@cs.strath.ac.uk")).to.equal(
-			getDomainFile("uk/ac/strath")
+			"University of Strathclyde"
 		);
 	});
 	it("Test enis.rnu.tn", () => {
-		expect(getSchoolName("enis.rnu.tn")).to.equal(getDomainFile("tn/rnu/enis"));
+		expect(getSchoolName("enis.rnu.tn")).to.equal(
+			"National Engineering School of Sfax"
+		);
 	});
 	it("Test http://www.rangers.co.uk", () => {
 		expect(getSchoolName("http://www.rangers.co.uk")).to.equal(false);
