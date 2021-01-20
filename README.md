@@ -44,7 +44,7 @@ swot.isAcademic('http://www.github.com')    // false
 swot.isAcademic('http://www.rangers.co.uk') // false
 ```
 
-#### Find School Names
+#### Find School Name
 
 ```javascript
 const swot = require("swot-node")
@@ -60,6 +60,15 @@ swot.getSchoolName('https://www.github.com')
 
 swot.getSchoolName('QaPk59GZ9Zv8.edu')
 // => true
+```
+
+#### Get all the different names of a school
+
+```javascript
+const swot = require("swot-node")
+
+swot.getSchoolNames('www.bbs1-gifhorn.de')
+// => [ "BBS1 Gifhorn", "Berufsbildene Schule 1 Gifhorn" ]
 ```
 
 ### License
