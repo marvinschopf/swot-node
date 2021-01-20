@@ -166,6 +166,10 @@ describe("getSchoolName Test Suite", () => {
 });
 
 describe("getSchoolNames Test Suite", () => {
+	const randomString1: string = makeid(16);
+	const randomString2: string = makeid(16);
+	const randomString3: string = makeid(16);
+	const randomString4: string = makeid(16);
 	it("Test lreilly@cs.strath.ac.uk", () => {
 		assert.deepStrictEqual(getSchoolNames("lreilly@cs.strath.ac.uk"), [
 			"University of Strathclyde",
@@ -178,5 +182,20 @@ describe("getSchoolNames Test Suite", () => {
 			getSchoolNames("https://www.email.bbs1-gifhorn.de"),
 			["BBS1 Gifhorn", "Berufsbildene Schule 1 Gifhorn"]
 		);
+	});
+	it("Test www." + randomString1 + ".edu", () => {
+		assert.deepStrictEqual(
+			getSchoolNames("www." + randomString1 + ".edu"),
+			true
+		);
+	});
+	it("Test www." + randomString2 + "." + randomString3, () => {
+		assert.strictEqual(
+			getSchoolNames("www." + randomString2 + "." + randomString3),
+			false
+		);
+	});
+	it("Test www." + randomString4 + ".net", () => {
+		assert.strictEqual(getSchoolNames("www." + randomString4 + ".net"), false);
 	});
 });
