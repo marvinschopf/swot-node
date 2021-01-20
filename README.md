@@ -51,6 +51,9 @@ const swot = require("swot-node")
 
 swot.getSchoolNames('www.bbs1-gifhorn.de')
 // => [ "BBS1 Gifhorn", "Berufsbildene Schule 1 Gifhorn" ]
+
+swot.getSchoolNames('stanford.edu')
+// => [ "Stanford University" ]
 ```
 
 #### Find School Name
