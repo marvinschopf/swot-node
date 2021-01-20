@@ -198,4 +198,9 @@ describe("getSchoolNames Test Suite", () => {
 	it("Test www." + randomString4 + ".net", () => {
 		assert.strictEqual(getSchoolNames("www." + randomString4 + ".net"), false);
 	});
+	it("Test ftps://ftp.stanford.edu:22", () => {
+		assert.deepStrictEqual(getSchoolNames("ftps://ftp.stanford.edu:22"), [
+			"Stanford University",
+		]);
+	});
 });
