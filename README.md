@@ -1,11 +1,11 @@
 # Swot 🍎
-### 🚨 If you would like to add your school/educational institution, please create a pull request in [this repository](https://github.com/magicmarvman/swot-data). 🚨
+### 🚨 If you would like to add your school/educational institution, please create a pull request in [this repository](https://github.com/JetBrains/swot). 🚨
 
 If you have a product or service and offer **academic discounts**, there's a good chance there's some manual component to the approval process. Perhaps `.edu` email addresses are automatically approved because, for the most part at least, they're associated with American post-secondary educational institutions. Perhaps `.ac.uk` email addresses are automatically approved because they're guaranteed to belong to British universities and colleges. Unfortunately, not every country has an education-specific TLD (Top Level Domain) and plenty of schools use `.com` or `.net`.
 
 Swot is a community-driven or crowdsourced library for verifying that domain names and email addresses are tied to a legitimate university of college - more specifically, an academic institution providing higher education in tertiary, quaternary or any other kind of post-secondary education in any country in the world.
 
-If you would like to add your school/educational institution, please create a pull request in [this repository](https://github.com/magicmarvman/swot-data).
+If you would like to add your school/educational institution, please create a pull request in [this repository](https://github.com/JetBrains/swot).
 
 ### Installation
 
