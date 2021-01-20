@@ -44,7 +44,19 @@ swot.isAcademic('http://www.github.com')    // false
 swot.isAcademic('http://www.rangers.co.uk') // false
 ```
 
-#### Find School Names
+#### Get all the different names of a school
+
+```javascript
+const swot = require("swot-node")
+
+swot.getSchoolNames('www.bbs1-gifhorn.de')
+// => [ "BBS1 Gifhorn", "Berufsbildene Schule 1 Gifhorn" ]
+
+swot.getSchoolNames('stanford.edu')
+// => [ "Stanford University" ]
+```
+
+#### Find School Name
 
 ```javascript
 const swot = require("swot-node")
@@ -94,4 +106,3 @@ THE SOFTWARE.
 * [swot-simple](https://github.com/mapbox/swot-simple) - JS port of Swot
 * [swot-clj](https://github.com/ipavl/swot-clj) - Clojure port of Swot
 * [swot](https://github.com/abadojack/swot) - Go port of Swot
-
