@@ -91,6 +91,7 @@ export function getSchoolName(url: string): string | boolean {
 					__dirname,
 					"..",
 					"data",
+					"lib",
 					"domains",
 					parsedUrl.publicSuffix,
 					domainWithoutSuffix(parsedUrl.domain, parsedUrl.publicSuffix) + ".txt"
