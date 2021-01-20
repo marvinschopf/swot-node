@@ -1,8 +1,9 @@
 import { expect } from "chai";
-import { isAcademic, getSchoolName } from "./../src";
+import { isAcademic, getSchoolName, getSchoolNames } from "./../src";
 
 import * as path from "path";
 import * as fs from "fs";
+import * as assert from "assert";
 
 function makeid(length: number): string {
 	let result: string = "";
@@ -165,5 +166,22 @@ describe("getSchoolName Test Suite", () => {
 	});
 	it('Test ""', () => {
 		expect(getSchoolName("")).to.equal(false);
+	});
+});
+
+describe("getSchoolNames Test Suite", () => {
+	const randomString1: string = makeid(16);
+	it("Test lreilly@cs.strath.ac.uk", () => {
+		assert.deepStrictEqual(getSchoolNames("lreilly@cs.strath.ac.uk"), [
+			"University of Strathclyde",
+			"uka tarsadia university,bardoli",
+			"Pune university (INDIA)",
+		]);
+	});
+	it("Test https://www.email.bbs1-gifhorn.txt", () => {
+		assert.deepStrictEqual(
+			getSchoolNames("https://www.email.bbs1-gifhorn.de"),
+			["BBS1 Gifhorn", "Berufsbildene Schule 1 Gifhorn"]
+		);
 	});
 });
