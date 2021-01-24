@@ -17,11 +17,16 @@ III. Information about the data processing
 The party responsible for this website (the "controller") for purposes of data protection law is:
 
 Marvin Schopf
+
 Mühlstraße 30
+
 65779 Kelkheim (Ts.)
+
 Germany
 
+
 Telephone: +49 6195 9619195
+
 Email: privacy@marvin.is
 
 ### II. The rights of users and data subjects
