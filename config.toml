@@ -12,7 +12,7 @@ pygmentsStyle = "pygments"
 [params]
 project_name = "swot-node"
 project_tagline = "🏫 Identify email addresses or domains names that belong to colleges or universities. Help automate the process of approving or rejecting academic discounts."
-footer = "[Marvin Schopf](https://marvin.is)"
+footer = "© [Marvin Schopf](https://www.marvinschopf.com)"
 
 [menu]
 [[menu.nav]]
