@@ -1,6 +1,8 @@
 # Swot 🍎
+
+**ℹ️ Swot is also available as a free [API on RapidAPI](https://rapidapi.com/magicmarvman/api/swot)**
+
 ### 🚨 If you would like to add your school/educational institution, please create a pull request in [this repository](https://github.com/JetBrains/swot). 🚨
-**ℹ️:** Swot is also available as a free [API on RapidAPI](https://rapidapi.com/magicmarvman/api/swot)
 
 If you have a product or service and offer **academic discounts**, there's a good chance there's some manual component to the approval process. Perhaps `.edu` email addresses are automatically approved because, for the most part at least, they're associated with American post-secondary educational institutions. Perhaps `.ac.uk` email addresses are automatically approved because they're guaranteed to belong to British universities and colleges. Unfortunately, not every country has an education-specific TLD (Top Level Domain) and plenty of schools use `.com` or `.net`.
 
