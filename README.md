@@ -1,6 +1,6 @@
 # Swot 🍎
 
-**ℹ️ Swot is also available as a free [API on RapidAPI](https://rapidapi.com/magicmarvman/api/swot)**
+**ℹ️ Swot is also available as a free [API](https://rapidapi.com/magicmarvman/api/swot)!**
 
 ### 🚨 If you would like to add your school/educational institution, please create a pull request in [this repository](https://github.com/JetBrains/swot). 🚨
 
