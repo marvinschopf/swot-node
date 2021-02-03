@@ -4,6 +4,7 @@ defaultContentLanguage = "en"
 title = "swot-node"
 theme = "cayman"
 
+disableKinds = ["taxonomy","taxonomyTerm"]
 
 # Syntax highlighting
 pygmentsCodefences = true
