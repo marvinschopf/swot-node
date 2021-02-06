@@ -3,6 +3,7 @@ import * as fs from "fs";
 import academicTlds from "./academicTlds";
 import blacklist from "./blacklist";
 import * as path from "path";
+import {EOL} from "os";
 
 // Remove public suffixes from the domain
 function domainWithoutSuffix(
@@ -85,8 +86,7 @@ export function getSchoolNames(url: string): Array<string> | boolean {
 					)
 				)
 				.toString("utf-8")
-				.replace("\r", "")
-				.split("\n")
+				.split(EOL)
 				.filter(Boolean);
 		} else {
 			if (temporaryAnswer === true) {
@@ -123,8 +123,7 @@ export function getSchoolNames(url: string): Array<string> | boolean {
 					)
 				)
 				.toString("utf-8")
-				.replace("\r", "")
-				.split("\n")
+				.split(EOL)
 				.filter(Boolean);
 		} else {
 			if (temporaryAnswer === true) {
