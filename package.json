@@ -42,5 +42,12 @@
     "build": "tsc",
     "test": "mocha -r ts-node/register tests/**/*.test.ts",
     "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test"
-  }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "dist/*",
+    "data/lib/domains/*"
+  ]
 }
