@@ -5,7 +5,22 @@
   "types": "dist/index.d.ts",
   "repository": "https://github.com/magicmarvman/swot-node.git",
   "homepage": "https://swot.js.org",
-  "author": "Marvin Schopf <marvin@schopf.biz>",
+  "description": "🏫 Identify email addresses or domains names that belong to colleges or universities. Help automate the process of approving or rejecting academic discounts.",
+  "funding": "https://github.com/marvinschopf/swot-node?sponsor=1",
+  "author": {
+    "name": "Marvin Schopf",
+    "email": "marvin@schopf.biz",
+    "url": "https://www.marvinschopf.com"
+  },
+  "keywords": [
+    "swot",
+    "email verification",
+    "verify email",
+    "academic emails",
+    "school emails",
+    "educational emails",
+    "verify school emails"
+  ],
   "license": "Apache-2.0",
   "private": false,
   "devDependencies": {
