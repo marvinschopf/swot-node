@@ -6,7 +6,7 @@
   "repository": "https://github.com/magicmarvman/swot-node.git",
   "homepage": "https://swot.js.org",
   "author": "Marvin Schopf <marvin@schopf.biz>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "private": false,
   "devDependencies": {
     "@types/chai": "^4.2.14",
