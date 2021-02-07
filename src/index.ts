@@ -3,7 +3,7 @@ import * as fs from "fs";
 import academicTlds from "./academicTlds";
 import blacklist from "./blacklist";
 import * as path from "path";
-import {EOL} from "os";
+import { EOL } from "os";
 
 // Remove public suffixes from the domain
 function domainWithoutSuffix(
