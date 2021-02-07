@@ -20,7 +20,7 @@
 
 import { parse } from "tldjs";
 import { promises as fs } from "fs";
-import academicTlds from "./academicTlds";
+import academicTlds from "academic-tld";
 import blacklist from "./blacklist";
 import * as path from "path";
 import { EOL } from "os";
