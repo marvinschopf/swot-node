@@ -27,23 +27,23 @@ function getDomainFile(domainPath: string): string {
 }
 
 describe("isAcademic Test Suite", function () {
-	it("Test berlin.de", () => {
-		expect(isAcademic("berlin.de")).to.equal(true);
+	it("Test berlin.de", async () => {
+		expect(await isAcademic("berlin.de")).to.equal(true);
 	});
-	it("Test stanford.edu", () => {
-		expect(isAcademic("stanford.edu")).to.equal(true);
+	it("Test stanford.edu", async () => {
+		expect(await isAcademic("stanford.edu")).to.equal(true);
 	});
-	it("Test github.com", () => {
-		expect(isAcademic("github.com")).to.equal(false);
+	it("Test github.com", async () => {
+		expect(await isAcademic("github.com")).to.equal(false);
 	});
-	it("Test itb.edu.bn", () => {
-		expect(isAcademic("itb.edu.bn")).to.equal(true);
+	it("Test itb.edu.bn", async () => {
+		expect(await isAcademic("itb.edu.bn")).to.equal(true);
 	});
-	it("Test itb.bn", () => {
-		expect(isAcademic("itb.bn")).to.equal(false);
+	it("Test itb.bn", async () => {
+		expect(await isAcademic("itb.bn")).to.equal(false);
 	});
-	it("Test yorkuniversity.us", () => {
-		expect(isAcademic("yorkuniversity.us")).to.equal(true);
+	it("Test yorkuniversity.us", async () => {
+		expect(await isAcademic("yorkuniversity.us")).to.equal(true);
 	});
 	const randomString1: string = makeid(16);
 	const randomString2: string = makeid(16);
@@ -51,111 +51,115 @@ describe("isAcademic Test Suite", function () {
 	const randomString4: string = makeid(16);
 	const randomString5: string = makeid(16);
 	const randomString6: string = makeid(16);
-	it("Test " + randomString1 + ".edu", () => {
-		expect(isAcademic(randomString1 + ".edu")).to.equal(true);
+	it("Test " + randomString1 + ".edu", async () => {
+		expect(await isAcademic(randomString1 + ".edu")).to.equal(true);
 	});
-	it("Test " + randomString2 + ".ac.ae", () => {
-		expect(isAcademic(randomString2 + ".ac.ae")).to.equal(true);
+	it("Test " + randomString2 + ".ac.ae", async () => {
+		expect(await isAcademic(randomString2 + ".ac.ae")).to.equal(true);
 	});
-	it("Test america.edu", () => {
-		expect(isAcademic("america.edu")).to.equal(false);
+	it("Test america.edu", async () => {
+		expect(await isAcademic("america.edu")).to.equal(false);
 	});
-	it("Test mail.america.edu", () => {
-		expect(isAcademic("mail.america.edu")).to.equal(false);
+	it("Test mail.america.edu", async () => {
+		expect(await isAcademic("mail.america.edu")).to.equal(false);
 	});
-	it("Test mail@berlin.de", () => {
-		expect(isAcademic("mail@berlin.de")).to.equal(true);
+	it("Test mail@berlin.de", async () => {
+		expect(await isAcademic("mail@berlin.de")).to.equal(true);
 	});
-	it("Test mail@" + randomString3 + ".edu", () => {
-		expect(isAcademic("mail@" + randomString3 + ".edu")).to.equal(true);
+	it("Test mail@" + randomString3 + ".edu", async () => {
+		expect(await isAcademic("mail@" + randomString3 + ".edu")).to.equal(true);
 	});
-	it("Test mail@" + randomString4 + ".ac.ae", () => {
-		expect(isAcademic("mail@" + randomString4 + ".ac.ae")).to.equal(true);
+	it("Test mail@" + randomString4 + ".ac.ae", async () => {
+		expect(await isAcademic("mail@" + randomString4 + ".ac.ae")).to.equal(true);
 	});
-	it("Test mail@www.duke.edu", () => {
-		expect(isAcademic("mail@www.duke.edu")).to.equal(true);
+	it("Test mail@www.duke.edu", async () => {
+		expect(await isAcademic("mail@www.duke.edu")).to.equal(true);
 	});
-	it("Test www.enis.rnu.tn", () => {
-		expect(isAcademic("www.enis.rnu.tn")).to.equal(true);
+	it("Test www.enis.rnu.tn", async () => {
+		expect(await isAcademic("www.enis.rnu.tn")).to.equal(true);
 	});
-	it("Test enis.rnu.tn", () => {
-		expect(isAcademic("enis.rnu.tn")).to.equal(true);
+	it("Test enis.rnu.tn", async () => {
+		expect(await isAcademic("enis.rnu.tn")).to.equal(true);
 	});
-	it("Test mail@enis.rnu.tn", () => {
-		expect(isAcademic("mail@enis.rnu.tn")).to.equal(true);
+	it("Test mail@enis.rnu.tn", async () => {
+		expect(await isAcademic("mail@enis.rnu.tn")).to.equal(true);
 	});
-	it("Test mail@www.enis.rnu.tn", () => {
-		expect(isAcademic("mail@www.enis.rnu.tn")).to.equal(true);
+	it("Test mail@www.enis.rnu.tn", async () => {
+		expect(await isAcademic("mail@www.enis.rnu.tn")).to.equal(true);
 	});
-	it("Test " + randomString5 + ".rnu.tn", () => {
-		expect(isAcademic(randomString5 + ".rnu.tn")).to.equal(false);
+	it("Test " + randomString5 + ".rnu.tn", async () => {
+		expect(await isAcademic(randomString5 + ".rnu.tn")).to.equal(false);
 	});
-	it("Test www." + randomString6 + ".rnu.tn", () => {
-		expect(isAcademic("www." + randomString6 + ".rnu.tn")).to.equal(false);
+	it("Test www." + randomString6 + ".rnu.tn", async () => {
+		expect(await isAcademic("www." + randomString6 + ".rnu.tn")).to.equal(
+			false
+		);
 	});
-	it("Test lreilly@stanford.edu", () => {
-		expect(isAcademic("lreilly@stanford.edu")).to.equal(true);
+	it("Test lreilly@stanford.edu", async () => {
+		expect(await isAcademic("lreilly@stanford.edu")).to.equal(true);
 	});
-	it("Test lreilly@strath.ac.uk", () => {
-		expect(isAcademic("lreilly@strath.ac.uk")).to.equal(true);
+	it("Test lreilly@strath.ac.uk", async () => {
+		expect(await isAcademic("lreilly@strath.ac.uk")).to.equal(true);
 	});
-	it("Test lreilly@soft-eng.strath.ac.uk", () => {
-		expect(isAcademic("lreilly@soft-eng.strath.ac.uk")).to.equal(true);
+	it("Test lreilly@soft-eng.strath.ac.uk", async () => {
+		expect(await isAcademic("lreilly@soft-eng.strath.ac.uk")).to.equal(true);
 	});
-	it("Test pedro@ugr.es", () => {
-		expect(isAcademic("pedro@ugr.es")).to.equal(true);
+	it("Test pedro@ugr.es", async () => {
+		expect(await isAcademic("pedro@ugr.es")).to.equal(true);
 	});
-	it("Test lee@uottawa.ca", () => {
-		expect(isAcademic("lee@uottawa.ca")).to.equal(true);
+	it("Test lee@uottawa.ca", async () => {
+		expect(await isAcademic("lee@uottawa.ca")).to.equal(true);
 	});
-	it("Test lee@leerilly.net", () => {
-		expect(isAcademic("lee@leerilly.net")).to.equal(false);
+	it("Test lee@leerilly.net", async () => {
+		expect(await isAcademic("lee@leerilly.net")).to.equal(false);
 	});
-	it("Test harvard.edu", () => {
-		expect(isAcademic("harvard.edu")).to.equal(true);
+	it("Test harvard.edu", async () => {
+		expect(await isAcademic("harvard.edu")).to.equal(true);
 	});
-	it("Test www.harvard.edu", () => {
-		expect(isAcademic("www.harvard.edu")).to.equal(true);
+	it("Test www.harvard.edu", async () => {
+		expect(await isAcademic("www.harvard.edu")).to.equal(true);
 	});
-	it("Test http://www.harvard.edu", () => {
-		expect(isAcademic("http://www.harvard.edu")).to.equal(true);
+	it("Test http://www.harvard.edu", async () => {
+		expect(await isAcademic("http://www.harvard.edu")).to.equal(true);
 	});
-	it("Test https://www.github.com", () => {
-		expect(isAcademic("https://www.github.com")).to.equal(false);
+	it("Test https://www.github.com", async () => {
+		expect(await isAcademic("https://www.github.com")).to.equal(false);
 	});
-	it("Test http://www.rangers.co.uk", () => {
-		expect(isAcademic("http://www.rangers.co.uk")).to.equal(false);
+	it("Test http://www.rangers.co.uk", async () => {
+		expect(await isAcademic("http://www.rangers.co.uk")).to.equal(false);
 	});
-	it('Test ""', () => {
-		expect(isAcademic("")).to.equal(false);
+	it('Test ""', async () => {
+		expect(await isAcademic("")).to.equal(false);
 	});
 });
 
 describe("getSchoolName Test Suite", () => {
 	const randomString1: string = makeid(16);
-	it("Test http://www.harvard.edu", () => {
-		expect(getSchoolName("http://www.harvard.edu")).to.equal(
+	it("Test http://www.harvard.edu", async () => {
+		expect(await getSchoolName("http://www.harvard.edu")).to.equal(
 			"Harvard University"
 		);
 	});
-	it("Test lreilly@cs.strath.ac.uk", () => {
-		expect(getSchoolName("lreilly@cs.strath.ac.uk")).to.equal(
+	it("Test lreilly@cs.strath.ac.uk", async () => {
+		expect(await getSchoolName("lreilly@cs.strath.ac.uk")).to.equal(
 			"University of Strathclyde"
 		);
 	});
-	it("Test enis.rnu.tn", () => {
-		expect(getSchoolName("enis.rnu.tn")).to.equal(
+	it("Test enis.rnu.tn", async () => {
+		expect(await getSchoolName("enis.rnu.tn")).to.equal(
 			"National Engineering School of Sfax"
 		);
 	});
-	it("Test http://www.rangers.co.uk", () => {
-		expect(getSchoolName("http://www.rangers.co.uk")).to.equal(false);
+	it("Test http://www.rangers.co.uk", async () => {
+		expect(await getSchoolName("http://www.rangers.co.uk")).to.equal(false);
 	});
-	it("Test mail@" + randomString1 + ".edu", () => {
-		expect(getSchoolName("mail@" + randomString1 + ".edu")).to.equal(true);
+	it("Test mail@" + randomString1 + ".edu", async () => {
+		expect(await getSchoolName("mail@" + randomString1 + ".edu")).to.equal(
+			true
+		);
 	});
-	it('Test ""', () => {
-		expect(getSchoolName("")).to.equal(false);
+	it('Test ""', async () => {
+		expect(await getSchoolName("")).to.equal(false);
 	});
 });
 
@@ -164,36 +168,39 @@ describe("getSchoolNames Test Suite", () => {
 	const randomString2: string = makeid(16);
 	const randomString3: string = makeid(16);
 	const randomString4: string = makeid(16);
-	it("Test lreilly@cs.strath.ac.uk", () => {
-		assert.deepStrictEqual(getSchoolNames("lreilly@cs.strath.ac.uk"), [
+	it("Test lreilly@cs.strath.ac.uk", async () => {
+		assert.deepStrictEqual(await getSchoolNames("lreilly@cs.strath.ac.uk"), [
 			"University of Strathclyde",
 			"uka tarsadia university,bardoli",
 			"Pune university (INDIA)",
 		]);
 	});
-	it("Test https://www.email.bbs1-gifhorn.txt", () => {
+	it("Test https://www.email.bbs1-gifhorn.txt", async () => {
 		assert.deepStrictEqual(
-			getSchoolNames("https://www.email.bbs1-gifhorn.de"),
+			await getSchoolNames("https://www.email.bbs1-gifhorn.de"),
 			["BBS1 Gifhorn", "Berufsbildene Schule 1 Gifhorn"]
 		);
 	});
-	it("Test www." + randomString1 + ".edu", () => {
+	it("Test www." + randomString1 + ".edu", async () => {
 		assert.deepStrictEqual(
-			getSchoolNames("www." + randomString1 + ".edu"),
+			await getSchoolNames("www." + randomString1 + ".edu"),
 			true
 		);
 	});
-	it("Test www." + randomString2 + "." + randomString3, () => {
+	it("Test www." + randomString2 + "." + randomString3, async () => {
 		assert.strictEqual(
-			getSchoolNames("www." + randomString2 + "." + randomString3),
+			await getSchoolNames("www." + randomString2 + "." + randomString3),
 			false
 		);
 	});
-	it("Test www." + randomString4 + ".net", () => {
-		assert.strictEqual(getSchoolNames("www." + randomString4 + ".net"), false);
+	it("Test www." + randomString4 + ".net", async () => {
+		assert.strictEqual(
+			await getSchoolNames("www." + randomString4 + ".net"),
+			false
+		);
 	});
-	it("Test ftps://ftp.stanford.edu:22", () => {
-		assert.deepStrictEqual(getSchoolNames("ftps://ftp.stanford.edu:22"), [
+	it("Test ftps://ftp.stanford.edu:22", async () => {
+		assert.deepStrictEqual(await getSchoolNames("ftps://ftp.stanford.edu:22"), [
 			"Stanford University",
 		]);
 	});
