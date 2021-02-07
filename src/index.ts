@@ -86,7 +86,8 @@ export function getSchoolNames(url: string): Array<string> | boolean {
 					)
 				)
 				.toString("utf-8")
-				.split(EOL)
+				.replace(EOL, "\n")
+				.split("\n")
 				.filter(Boolean);
 		} else {
 			if (temporaryAnswer === true) {
@@ -123,7 +124,8 @@ export function getSchoolNames(url: string): Array<string> | boolean {
 					)
 				)
 				.toString("utf-8")
-				.split(EOL)
+				.replace(EOL, "\n")
+				.split("\n")
 				.filter(Boolean);
 		} else {
 			if (temporaryAnswer === true) {
