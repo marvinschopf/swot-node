@@ -25,12 +25,12 @@ or
 ```javascript
 const swot = require("swot-node")
 
-swot.isAcademic('lreilly@stanford.edu')           // true
-swot.isAcademic('lreilly@strath.ac.uk')           // true
-swot.isAcademic('lreilly@soft-eng.strath.ac.uk')  // true
-swot.isAcademic('pedro@ugr.es')                   // true
-swot.isAcademic('lee@uottawa.ca')                 // true
-swot.isAcademic('lee@leerilly.net')               // false
+await swot.isAcademic('lreilly@stanford.edu')           // true
+await swot.isAcademic('lreilly@strath.ac.uk')           // true
+await swot.isAcademic('lreilly@soft-eng.strath.ac.uk')  // true
+await swot.isAcademic('pedro@ugr.es')                   // true
+await swot.isAcademic('lee@uottawa.ca')                 // true
+await swot.isAcademic('lee@leerilly.net')               // false
 ```
 
 #### Verify Domain Names
@@ -38,11 +38,11 @@ swot.isAcademic('lee@leerilly.net')               // false
 ```javascript
 const swot = require("swot-node")
 
-swot.isAcademic('harvard.edu')              // true
-swot.isAcademic('www.harvard.edu')          // true
-swot.isAcademic('http://www.harvard.edu')   // true
-swot.isAcademic('http://www.github.com')    // false
-swot.isAcademic('http://www.rangers.co.uk') // false
+await swot.isAcademic('harvard.edu')              // true
+await swot.isAcademic('www.harvard.edu')          // true
+await swot.isAcademic('http://www.harvard.edu')   // true
+await swot.isAcademic('http://www.github.com')    // false
+await swot.isAcademic('http://www.rangers.co.uk') // false
 ```
 
 #### Get all the different names of a school
@@ -50,10 +50,10 @@ swot.isAcademic('http://www.rangers.co.uk') // false
 ```javascript
 const swot = require("swot-node")
 
-swot.getSchoolNames('www.bbs1-gifhorn.de')
+await swot.getSchoolNames('www.bbs1-gifhorn.de')
 // => [ "BBS1 Gifhorn", "Berufsbildene Schule 1 Gifhorn" ]
 
-swot.getSchoolNames('stanford.edu')
+await swot.getSchoolNames('stanford.edu')
 // => [ "Stanford University" ]
 ```
 
@@ -62,16 +62,16 @@ swot.getSchoolNames('stanford.edu')
 ```javascript
 const swot = require("swot-node")
 
-swot.getSchoolName('lreilly@cs.strath.ac.uk')
+await swot.getSchoolName('lreilly@cs.strath.ac.uk')
 // => "University of Strathclyde"
 
-swot.getSchoolName('http://www.stanford.edu')
+await swot.getSchoolName('http://www.stanford.edu')
 // => "Stanford University"
 
-swot.getSchoolName('https://www.github.com')
+await swot.getSchoolName('https://www.github.com')
 // => false
 
-swot.getSchoolName('QaPk59GZ9Zv8.edu')
+await swot.getSchoolName('QaPk59GZ9Zv8.edu')
 // => true
 ```
 
