@@ -1,4 +1,4 @@
-# Swot 🍎
+# Swot 🍎 ![Node.js CI](https://github.com/marvinschopf/swot-node/workflows/Node.js%20CI/badge.svg?branch=main)
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q4HQ53)
 ### 🚨 If you would like to add your school/educational institution, please create a pull request in [this repository](https://github.com/JetBrains/swot). 🚨
 
