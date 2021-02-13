@@ -1,4 +1,4 @@
-# Swot 🍎 ![Node.js CI](https://github.com/marvinschopf/swot-node/workflows/Node.js%20CI/badge.svg?branch=main)
+# Swot 🍎
 ### 🚨 If you would like to add your school/educational institution, please create a pull request in [this repository](https://github.com/JetBrains/swot). 🚨
 
 If you have a product or service and offer **academic discounts**, there's a good chance there's some manual component to the approval process. Perhaps `.edu` email addresses are automatically approved because, for the most part at least, they're associated with American post-secondary educational institutions. Perhaps `.ac.uk` email addresses are automatically approved because they're guaranteed to belong to British universities and colleges. Unfortunately, not every country has an education-specific TLD (Top Level Domain) and plenty of schools use `.com` or `.net`.
@@ -84,7 +84,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
