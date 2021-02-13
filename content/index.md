@@ -1,4 +1,4 @@
-# Swot 🍎
+# Swot 🍎 ![Node.js CI](https://github.com/marvinschopf/swot-node/workflows/Node.js%20CI/badge.svg?branch=main)
 ### 🚨 If you would like to add your school/educational institution, please create a pull request in [this repository](https://github.com/JetBrains/swot). 🚨
 
 If you have a product or service and offer **academic discounts**, there's a good chance there's some manual component to the approval process. Perhaps `.edu` email addresses are automatically approved because, for the most part at least, they're associated with American post-secondary educational institutions. Perhaps `.ac.uk` email addresses are automatically approved because they're guaranteed to belong to British universities and colleges. Unfortunately, not every country has an education-specific TLD (Top Level Domain) and plenty of schools use `.com` or `.net`.
@@ -24,12 +24,12 @@ or
 ```javascript
 const swot = require("swot-node")
 
-swot.isAcademic('lreilly@stanford.edu')           // true
-swot.isAcademic('lreilly@strath.ac.uk')           // true
-swot.isAcademic('lreilly@soft-eng.strath.ac.uk')  // true
-swot.isAcademic('pedro@ugr.es')                   // true
-swot.isAcademic('lee@uottawa.ca')                 // true
-swot.isAcademic('lee@leerilly.net')               // false
+await swot.isAcademic('lreilly@stanford.edu')           // true
+await swot.isAcademic('lreilly@strath.ac.uk')           // true
+await swot.isAcademic('lreilly@soft-eng.strath.ac.uk')  // true
+await swot.isAcademic('pedro@ugr.es')                   // true
+await swot.isAcademic('lee@uottawa.ca')                 // true
+await swot.isAcademic('lee@leerilly.net')               // false
 ```
 
 #### Verify Domain Names
@@ -37,11 +37,11 @@ swot.isAcademic('lee@leerilly.net')               // false
 ```javascript
 const swot = require("swot-node")
 
-swot.isAcademic('harvard.edu')              // true
-swot.isAcademic('www.harvard.edu')          // true
-swot.isAcademic('http://www.harvard.edu')   // true
-swot.isAcademic('http://www.github.com')    // false
-swot.isAcademic('http://www.rangers.co.uk') // false
+await swot.isAcademic('harvard.edu')              // true
+await swot.isAcademic('www.harvard.edu')          // true
+await swot.isAcademic('http://www.harvard.edu')   // true
+await swot.isAcademic('http://www.github.com')    // false
+await swot.isAcademic('http://www.rangers.co.uk') // false
 ```
 
 #### Get all the different names of a school
@@ -49,10 +49,10 @@ swot.isAcademic('http://www.rangers.co.uk') // false
 ```javascript
 const swot = require("swot-node")
 
-swot.getSchoolNames('www.bbs1-gifhorn.de')
+await swot.getSchoolNames('www.bbs1-gifhorn.de')
 // => [ "BBS1 Gifhorn", "Berufsbildene Schule 1 Gifhorn" ]
 
-swot.getSchoolNames('stanford.edu')
+await swot.getSchoolNames('stanford.edu')
 // => [ "Stanford University" ]
 ```
 
@@ -61,42 +61,37 @@ swot.getSchoolNames('stanford.edu')
 ```javascript
 const swot = require("swot-node")
 
-swot.getSchoolName('lreilly@cs.strath.ac.uk')
+await swot.getSchoolName('lreilly@cs.strath.ac.uk')
 // => "University of Strathclyde"
 
-swot.getSchoolName('http://www.stanford.edu')
+await swot.getSchoolName('http://www.stanford.edu')
 // => "Stanford University"
 
-swot.getSchoolName('https://www.github.com')
+await swot.getSchoolName('https://www.github.com')
 // => false
 
-swot.getSchoolName('QaPk59GZ9Zv8.edu')
+await swot.getSchoolName('QaPk59GZ9Zv8.edu')
 // => true
 ```
 
 ### License
-**The MIT License (MIT)**
+**Apache 2.0**
 
 Copyright (c) 2021 Marvin Schopf <br>
 Copyright (c) 2013 Lee Reilly
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+    http://www.apache.org/licenses/LICENSE-2.0
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
 
 ### See Also
 
