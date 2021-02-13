@@ -77,7 +77,7 @@ await swot.getSchoolName('QaPk59GZ9Zv8.edu')
 ### License
 **Apache 2.0**
 
-Copyright (c) 2021 Marvin Schopf <br>
+Copyright (c) 2021 Marvin Schopf  
 Copyright (c) 2013 Lee Reilly
 
 Licensed under the Apache License, Version 2.0 (the "License");
