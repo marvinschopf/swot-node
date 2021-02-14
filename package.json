@@ -48,6 +48,7 @@
     "README.md",
     "package.json",
     "dist/*",
-    "data/lib/domains/*"
+    "data/lib/domains/*",
+    "data/LICENSE.txt"
   ]
 }
