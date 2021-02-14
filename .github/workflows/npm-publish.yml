@@ -41,6 +41,7 @@ jobs:
       - run: yarn run build
       - run: yarn run test
       - run: yarn version --patch
+      - run: git config --global user.email "github-actions@marvin.is" && git config --global user.name "GitHub Actions"
       - uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
