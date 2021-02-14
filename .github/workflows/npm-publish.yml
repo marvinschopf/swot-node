@@ -28,6 +28,9 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-node@v1
         with:
           node-version: 15
@@ -37,6 +40,11 @@ jobs:
       - run: git submodule update --recursive --remote
       - run: yarn run build
       - run: yarn run test
+      - run: yarn version --patch
+      - uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
@@ -55,6 +63,7 @@ jobs:
       - run: git submodule update --recursive --remote
       - run: yarn run build
       - run: yarn run test
+      - run: yarn version --patch
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
