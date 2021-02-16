@@ -6,7 +6,7 @@
   "repository": "https://github.com/magicmarvman/swot-node.git",
   "homepage": "https://swot.js.org",
   "description": "🏫 Identify email addresses or domains names that belong to colleges or universities. Help automate the process of approving or rejecting academic discounts.",
-  "funding": "https://github.com/marvinschopf/swot-node?sponsor=1",
+  "funding": "https://sponsor.marvinschopf.com/swot-node",
   "author": {
     "name": "Marvin Schopf",
     "email": "marvin@schopf.biz",
