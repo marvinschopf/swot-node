@@ -51,27 +51,3 @@ jobs:
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-          fetch-depth: 0
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 15
-          registry-url: https://npm.pkg.github.com/
-      - run: yarn install
-      - run: git submodule update --init --recursive
-      - run: git submodule update --recursive --remote
-      - run: yarn run build
-      - run: yarn run test
-      - name: Setup Identity
-        run: git config --global user.email "github-actions@marvin.is" && git config --global user.name "GitHub Actions"
-      - run: yarn version --patch
-      - run: yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
