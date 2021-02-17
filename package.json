@@ -3,7 +3,7 @@
   "version": "2.0.11",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "https://github.com/magicmarvman/swot-node.git",
+  "repository": "https://github.com/marvinschopf/swot-node.git",
   "homepage": "https://swot.js.org",
   "description": "🏫 Identify email addresses or domains names that belong to colleges or universities. Help automate the process of approving or rejecting academic discounts.",
   "funding": "https://sponsor.marvinschopf.com/swot-node",
