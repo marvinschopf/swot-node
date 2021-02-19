@@ -1,9 +1,10 @@
 # Swot 🍎
-[![Node.js CI](https://github.com/marvinschopf/swot-node/workflows/Node.js%20CI/badge.svg?branch=main&style=flat-square)](https://github.com/marvinschopf/swot-node/actions/workflows/node.js.yml) [![Package Quality](https://packagequality.com/shield/swot-node.svg?style=flat-square)](https://packagequality.com/#?package=swot-node) [![Dependencies](https://img.shields.io/david/marvinschopf/swot-node?style=flat-square)](https://github.com/marvinschopf/swot-node/network/dependencies) [![Downloads](https://img.shields.io/npm/dt/swot-node?style=flat-square)](https://www.npmjs.com/package/swot-node) [![Last commit](https://img.shields.io/github/last-commit/marvinschopf/swot-node?style=flat-square)](https://github.com/marvinschopf/swot-node/commits/main)
+![Node.js CI](https://github.com/marvinschopf/swot-node/workflows/Node.js%20CI/badge.svg?branch=main&style=flat-square) ![Package Quality](https://packagequality.com/shield/swot-node.svg?style=flat-square) ![Dependencies](https://img.shields.io/david/marvinschopf/swot-node?style=flat-square) ![Downloads](https://img.shields.io/npm/dt/swot-node?style=flat-square) ![Last commit](https://img.shields.io/github/last-commit/marvinschopf/swot-node?style=flat-square)
 
 If you have a product or service and offer **academic discounts**, there's a good chance there's some manual component to the approval process. Perhaps `.edu` email addresses are automatically approved because, for the most part at least, they're associated with American post-secondary educational institutions. Perhaps `.ac.uk` email addresses are automatically approved because they're guaranteed to belong to British universities and colleges. Unfortunately, not every country has an education-specific TLD (Top Level Domain) and plenty of schools use `.com` or `.net`.
 
 Swot is a community-driven or crowdsourced library for verifying that domain names and email addresses are tied to a legitimate university of college - more specifically, an academic institution providing higher education in tertiary, quaternary or any other kind of post-secondary education in any country in the world.
+
 
 If you would like to add your school/educational institution, please create a pull request in [this repository](https://github.com/JetBrains/swot). `Jetbrains/swot` does not provide source code to this library, but is included as the dataset as it contains thousands of schools and the team at Jetbrains is verifying and adding many schools every day. A new version of [`swot-node`](https://www.npmjs.com/package/swot-node) with an updated dataset is automatically published to NPM every 24 hours.
 
@@ -77,14 +78,13 @@ await swot.getSchoolName('QaPk59GZ9Zv8.edu')
 ### License
 **Apache 2.0**
 
-Copyright (c) 2021 Marvin Schopf <br>
-Copyright (c) 2013 Lee Reilly
+Copyright (c) 2021 Marvin Schopf
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
