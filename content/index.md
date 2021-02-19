@@ -98,6 +98,5 @@ limitations under the License.
 * [swot](https://github.com/leereilly/swot) - original ruby version of swot
 * [gman](https://github.com/benbalter/gman) - like swot, but for government emails
 * [swotphp](https://github.com/mdwheele/swotphp) - PHP port of Swot
-* [swot-simple](https://github.com/mapbox/swot-simple) - JS port of Swot
 * [swot-clj](https://github.com/ipavl/swot-clj) - Clojure port of Swot
 * [swot](https://github.com/abadojack/swot) - Go port of Swot
