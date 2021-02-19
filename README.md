@@ -77,14 +77,13 @@ await swot.getSchoolName('QaPk59GZ9Zv8.edu')
 ### License
 **Apache 2.0**
 
-Copyright (c) 2021 Marvin Schopf <br>
-Copyright (c) 2013 Lee Reilly
+Copyright (c) 2021 Marvin Schopf
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -98,6 +97,5 @@ limitations under the License.
 * [swot](https://github.com/leereilly/swot) - original ruby version of swot
 * [gman](https://github.com/benbalter/gman) - like swot, but for government emails
 * [swotphp](https://github.com/mdwheele/swotphp) - PHP port of Swot
-* [swot-simple](https://github.com/mapbox/swot-simple) - JS port of Swot
 * [swot-clj](https://github.com/ipavl/swot-clj) - Clojure port of Swot
 * [swot](https://github.com/abadojack/swot) - Go port of Swot
