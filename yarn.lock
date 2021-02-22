@@ -218,9 +218,9 @@
   integrity sha512-sL/cEvJWAnClXw0wHk85/2L0G6Sj8UB0Ctc1TEMbKSsmpRosqhwj9gWgFRZSrBr2f9tiXISwNhCPmlfqUqyb9Q==
 
 academic-tld@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/academic-tld/-/academic-tld-1.0.4.tgz#86a160cad937851d2491feb7a8da1d0529f4b3e3"
-  integrity sha512-YKtlvofI2BkDEUXUmA5PFR1pzo48NwDtwKF7SMZBlj29Vt2Go/lAo3ORLju6ZD3knnycssXhkWB7X+pyXjokxQ==
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/academic-tld/-/academic-tld-1.0.5.tgz#38bb955a41a7ee64f9d1fbed653fcb6110c4723d"
+  integrity sha512-7SaW1AwZ03bx9tQGmB3HxAP4kOX65J4g8TI3IusW9Nv6Bjby4A6C89y1WCAZH+yGhLuuWa5c6MpHLoSlflrXgQ==
 
 aggregate-error@^3.0.0:
   version "3.1.0"
