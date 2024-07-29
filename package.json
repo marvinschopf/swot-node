@@ -1,6 +1,6 @@
 {
   "name": "swot-node",
-  "version": "2.0.1263",
+  "version": "2.0.1264",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/marvinschopf/swot-node.git",
