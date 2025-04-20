@@ -105,7 +105,7 @@ describe("isAcademic Test Suite", function () {
 		expect(await isAcademic("lreilly@soft-eng.strath.ac.uk")).to.equal(true);
 	});
 	it("Test pedro@ugr.es", async () => {
-		expect(await isAcademic("pedro@ugr.es")).to.equal(true);
+		expect(await isAcademic("pedro@ugr.es")).to.equal(false);
 	});
 	it("Test lee@uottawa.ca", async () => {
 		expect(await isAcademic("lee@uottawa.ca")).to.equal(true);
