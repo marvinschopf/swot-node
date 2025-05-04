@@ -207,10 +207,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.33.tgz#9e4f8c64345522e4e8ce77b334a8aaa64e2b6c78"
   integrity sha512-oJqcTrgPUF29oUP8AsUqbXGJNuPutsetaa9kTQAQce5Lx5dTYWV02ScBiT/k1BX/Z7pKeqedmvp39Wu4zR7N7g==
 
-"@types/tldjs@2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@types/tldjs/-/tldjs-2.3.0.tgz#bc90f5bd1df3b15123b67845abb907cb0e9096ca"
-  integrity sha512-+gqspH/N6YjpApp96/XzM2AZK4R0Bk2qb4e5o16indSvgblfFaAIxNV8BdJmbqfSAYUyZubLzvrmpvdVEmBq3A==
+"@types/tldjs@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@types/tldjs/-/tldjs-2.3.1.tgz#ad7a387356ac178d631d43f9113b782d9e1f24ed"
+  integrity sha512-BQR04zLE0ve2eNrqxXw/Qp/f6LxvNrj/4A8ZgdQi3SzbBqxFhleI7N4DS/mSjDnODrUaEGgoWg4grAZR1kVj8w==
 
 "@ungap/promise-all-settled@1.1.2":
   version "1.1.2"
